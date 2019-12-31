@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb://localhost:27017/jobs")
+//mongoose.connect("mongodb://localhost:27017/jobs")
 const md5=require("blueimp-md5")
 const conn=mongoose.connection
 conn.on("connected",function(){
