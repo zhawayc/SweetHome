@@ -1,8 +1,10 @@
+const dburl = process.env.MONGODB_URL;
+
 const mongoose=require("mongoose")
 if(process.env.NODE_ENV == "production"){
-    mongoose.connect('mongodb+srv://yanchen:614a7159509@cluster0-lmehk.mongodb.net/test?retryWrites=true&w=majority');
+    mongoose.connect("mongodb+srv://yanchen:614a7159509@cluster0-lmehk.mongodb.net/test?retryWrites=true");
 }else{
-    mongoose.connect('mongodb+srv://yanchen:614a7159509@cluster0-lmehk.mongodb.net/test?retryWrites=true&w=majority');
+    mongoose.connect("mongodb+srv://yanchen:614a7159509@cluster0-lmehk.mongodb.net/test?retryWrites=true");
     //mongoose.connect("mongodb://localhost:27017/jobs");
 }
 const conn=mongoose.connection
