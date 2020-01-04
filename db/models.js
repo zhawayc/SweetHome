@@ -17,10 +17,10 @@ const userSchema=mongoose.Schema({
     password:{type:String,required:true},
     type:{type:String,required:true},
     header:{type:String},
-    info:{type:String},
-    post:{type:String},
-    company:{type:String},
-    salary:{type:String}
+    intro:{type:String},
+    location:{type:String},
+    room:{type:String},
+    budget:{type:String}
 })
 
 userModel=mongoose.model("user",userSchema)

@@ -16,7 +16,7 @@ const userSchema=mongoose.Schema({
 const userModel=mongoose.model("user",userSchema)
 
 function testSave(){
-    const userdata=new userModel({username:"yanchen",password:md5("123"),type:"recruiter"})
+    const userdata=new userModel({username:"yanchen",password:md5("123"),type:"haveaRoom"})
     userdata.save(function(err,user){
         console.log("save",err,user)
     })
@@ -33,7 +33,7 @@ function testFind(){
 }
 
 function testUpdate(){
-    userModel.findByIdAndUpdate({_id:"5dfda321621d1c16600a2bd5"},{"type":"candidate"},function(err,doc){
+    userModel.findByIdAndUpdate({_id:"5dfda321621d1c16600a2bd5"},{"type":"needaRoom"},function(err,doc){
         console.log("update",err,doc)
     })
 }
